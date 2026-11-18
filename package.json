@@ -1,0 +1,12 @@
+{
+  "name": "task-manager-backend",
+  "version": "1.0.0",
+  "description": "Task management backend starter using Node.js and ESM",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "license": "ISC"
+}
