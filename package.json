@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "Task management backend starter using Node.js and ESM",
   "type": "module",
-  "main": "src/app.js",
+  "main": "dist/app.js",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "node --watch src/app.js"
+    "build": "tsc",
+    "start": "npm run build && node dist/app.js",
+    "dev": "npm run build && node --watch dist/app.js"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
 }

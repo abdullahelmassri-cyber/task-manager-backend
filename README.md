@@ -1,49 +1,67 @@
-# Task Management Backend Starter
+# Async Task Management Backend with TypeScript
 
-A Node.js project that demonstrates a simple task management backend structure using ES modules.
+A Node.js project that demonstrates asynchronous task operations using TypeScript, ES modules, and in-memory data.
 
 ## Requirements
 
-- Node.js 18 or later
+- Node.js 24 or later
+- npm
+
+## Setup
+
+Install the development dependencies:
+
+```bash
+npm install
+```
 
 ## Run the project
 
-Open a terminal in the project folder and run:
+Build and run the program:
 
 ```bash
 npm start
 ```
 
-For development, run:
+Compile the TypeScript files without running the program:
+
+```bash
+npm run build
+```
+
+For development:
 
 ```bash
 npm run dev
 ```
 
-The development command watches for file changes and restarts the program when you save.
+The development command builds once and watches the compiled JavaScript. After editing a TypeScript file, stop the command with Ctrl + C and run it again to rebuild.
 
 ## Project structure
 
 ```text
-task-manager-backend/
-├── src/
-│   ├── modules/
-│   │   ├── tasks/
-│   │   │   └── tasks.service.js
-│   │   └── users/
-│   │       └── users.service.js
-│   └── app.js
-├── .gitignore
-├── package.json
-└── README.md
+src/
+├── app.ts
+└── modules/
+    ├── tasks/
+    │   ├── task.interface.ts
+    │   └── tasks.service.ts
+    └── users/
+        ├── user.interface.ts
+        └── users.service.ts
 ```
 
-- `app.js` is the entry point. It runs examples of the user and task operations.
-- The users module can list users, find a user by ID, and create a user.
-- The tasks module can list, create, complete, and delete tasks.
+- `app.ts` runs examples of successful operations and handles an expected error.
+- The Users module defines the `User` interface and manages sample users.
+- The Tasks module defines the `Task` interface and provides asynchronous functions to list, create, complete, and delete tasks.
+- TypeScript strict mode is enabled in `tsconfig.json`.
 
 ## Data storage
 
-Users and tasks are stored in memory. Any changes are lost when the program stops, and the sample data is restored the next time it runs.
+Users and tasks are stored in memory. Changes are lost when the program stops, and the sample data is restored when it runs again.
 
-This starter prints results to the terminal; it does not start a web server or provide API endpoints.
+The program prints results to the terminal. It does not start a web server or provide API endpoints.
+
+## AI use
+
+An AI coding assistant helped convert the project to TypeScript, implement asynchronous task operations, and troubleshoot the TypeScript configuration. The changes were inspected, and `npm start` was run to verify the successful operations and expected error.
